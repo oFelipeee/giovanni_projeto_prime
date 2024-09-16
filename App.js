@@ -1,20 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import Prime from './src/Telas/Prime';
+import Texto from './src/Components/Texto';
+import Contador from './src/Components/Contador';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Ola Paulino!</Text>
+    <ScrollView>
+      <Prime />
+      <Texto />
+      <Contador/>
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
