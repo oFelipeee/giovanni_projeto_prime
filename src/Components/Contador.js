@@ -6,28 +6,28 @@ export default function Contador() {
     const [msg, setMsg] = useState(' ');
 
     useEffect(() => {
-        setMsg('O valor do count foi atualizado' +  count  + 'Vez(es)')
+        setMsg('O valor do count foi atualizado  ' + count + '  Vez(es)')
     }, [count])
 
     return (
         <>
-            <Text style={estilos.texto}>Voçê clicou aqui: {count}</Text>
+            <Text style={estilos.texto}>Voçê clicou aqui: {count} </Text>
             <Text>{msg}</Text>
 
             <View style={estilos.buttonList}>
-                <Button 
+                <Button
                     onPress={() => {
                         setCount(count + 1)
                     }}
-                title='Aumentar' />
+                    title='Aumentar' />
             </View>
 
             <View style={estilos.buttonList}>
-                <Button 
-                onPress={() => {
-                    setCount(count - 1)
-                }}
-                title='Diminuir'/>
+                <Button
+                    onPress={() => {
+                        setCount(count - 1)
+                    }}
+                    title='Diminuir' />
             </View>
         </>
     )

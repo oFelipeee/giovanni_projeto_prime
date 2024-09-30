@@ -6,7 +6,7 @@ export default function Texto() {
 
     useEffect(() => {
         setTexto("Texto alterado")
-    }, []); 
+    }, []);
 
     return (
         <Text style={estilos.texto}>{texto}</Text>
