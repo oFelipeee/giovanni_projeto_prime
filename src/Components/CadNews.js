@@ -5,6 +5,8 @@ export default function CadNews() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [cep, setCep] = useState('');
 
     const handleSubmit = () => {
 
@@ -18,10 +20,14 @@ export default function CadNews() {
         console.log("Nome:", nome);
         console.log("Email:", email);
         console.log("Senha:", senha);
+        console.log("Senha:", telefone);
+        console.log("Senha:", cep);
 
         setNome("");
         setEmail("");
         setSenha("");
+        setTelefone("");
+        setCep("");
     }
 
 
@@ -45,6 +51,20 @@ export default function CadNews() {
                 secureTextEntry={true}
                 value={senha}
                 onChangeText={setSenha}
+
+            />
+            <TextInput
+                style={styles.input}
+                placeholder='Digite seu telefone'
+                value={telefone}
+                onChangeText={setTelefone}
+
+            />
+            <TextInput
+                style={styles.input}
+                placeholder='Digite seu cep'
+                value={cep}
+                onChangeText={setCep}
 
             />
             <Button title='Enviar' onPress={handleSubmit} />
