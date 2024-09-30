@@ -8,10 +8,20 @@ export default function CadNews() {
 
     const handleSubmit = () => {
 
+        // Validação do formulario
+        if (!nome || !email || !senha) {
+            alert("Por favor, preencha todos os campos!")
+            return;
+        }
+
         // Aqui voce epode linkar com o envio dos dados 
         console.log("Nome:", nome);
         console.log("Email:", email);
         console.log("Senha:", senha);
+
+        setNome("");
+        setEmail("");
+        setSenha("");
     }
 
 
@@ -40,7 +50,9 @@ export default function CadNews() {
             <Button title='Enviar' onPress={handleSubmit} />
             {nome && email && senha && (
                 <Text>
-                    Nome: {nome}, Email: {email}, Senha: {senha}
+                    Nome: {nome}, Email: {email}, Senha: {senha}, 
+                    {/* Adicionando uma máscara para a senha */}
+                    Nova senha: {'*'.repeat(senha.length)}
                 </Text>
             )}
         </View>
